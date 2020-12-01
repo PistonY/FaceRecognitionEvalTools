@@ -3,11 +3,11 @@ import sys
 
 sys.path.append(os.getcwd())
 
-from Eval import FeatureGenerator
+from BBFE import FeatureGenerator
 import numpy as np
 import cv2
 
-FG = FeatureGenerator('../models/mobilefacenet_glint360k.pt',
+FG = FeatureGenerator('../models/mobilefacenet_glint360k_arcface.pt',
                       device='cuda:0', model_dtype='float16', align=True, flip=False)
 
 lk = np.array([46.060, 62.026, 87.785, 60.323, 68.851, 77.656, 52.162, 99.875, 86.450, 98.648]).reshape((5, 2))

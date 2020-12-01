@@ -9,7 +9,7 @@ from torch.utils.data import Dataset
 from torchvision import transforms
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
-from Eval.utils import AlignTransform
+from utils import AlignTransform
 
 
 class IJBDataset(Dataset):
@@ -69,9 +69,6 @@ def generate_image_feature(lst_path, img_path, model, batch_size, num_workers, d
     for data, sc in tqdm(val_loader):
         data = data.to(device, dtype, non_blocking=True)
         sc = sc.to(device, dtype, non_blocking=True)
-        # if dtype == 'float16':
-        #     data = data.half()
-        #     sc = sc.half()
         data_flip = data.flip(3) if flip else None
         embeddings = model(data)
         embeddings_flip = model(data_flip) if flip else None

@@ -8,8 +8,8 @@ import cv2
 import argparse
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from Eval.utils import check_dir
-from Eval.IJB.utils import IJBDataset
+from utils import check_dir
+from IJB.utils import IJBDataset
 
 parser = argparse.ArgumentParser(description='Align IJB Images.')
 parser.add_argument('--target', default='IJBC', type=str, help='target, set to IJBC or IJBB')

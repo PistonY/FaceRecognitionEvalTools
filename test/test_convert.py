@@ -3,7 +3,7 @@ import sys
 
 sys.path.append(os.getcwd())
 
-from Eval.utils import export_ts
+from utils import export_ts
 
 if __name__ == '__main__':
     export_ts('GhostNet', '/media/devin/data/PycharmProjects/VideoDNA/face_params/GhostNet_Glint360K_56.pt',

@@ -7,8 +7,8 @@ sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
 import argparse
 import numpy as np
 from tqdm import tqdm
-from Eval.utils import load_model, check_dir, l2norm, get_model_info
-from Eval.IJB.utils import read_meta_file, generate_image_feature
+from utils import load_model, check_dir, l2norm, get_model_info
+from IJB.utils import read_meta_file, generate_image_feature
 
 parser = argparse.ArgumentParser(description='do ijb test.')
 parser.add_argument('--model-path', type=str, required=True,

@@ -11,8 +11,8 @@ from tqdm import tqdm
 from torchvision import transforms
 from torch.nn import functional as F
 from torch.utils.data import DataLoader
-from Eval.MegaFace.utils import MegafaceDataset, write_bin
-from Eval.utils import check_dir, load_model, l2norm, get_model_info
+from MegaFace.utils import MegafaceDataset, write_bin
+from utils import check_dir, load_model, l2norm, get_model_info
 
 parser = argparse.ArgumentParser(description='Generate MegaFace eval files.')
 

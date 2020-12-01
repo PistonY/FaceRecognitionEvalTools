@@ -3,7 +3,7 @@ __all__ = ['FeatureGenerator']
 import torch
 import numpy as np
 from torch.nn import functional as F
-from ..utils import load_model, AlignTransform, _dtypes, get_model_info
+from utils import load_model, AlignTransform, _dtypes, get_model_info
 from torchvision.transforms import ToTensor
 
 
